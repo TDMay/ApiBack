@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Odyssey</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./assets/Logo XP.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img class="cabecalho__logo" src="assets/Logo XP.svg" alt="Logo do XP Studio que é a empresa criadora do site/jogo">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="#sobre">Sobre</a>
+            <a class="cabecalho__menu__link" href="#como-jogar">Como Jogar</a>
+            <a class="cabecalho__menu__link" href="#ciencia">Ciência</a>
+            <a class="cabecalho__menu__link" href="#cadastro">Cadastro</a>
+            <a class="cabecalho__menu__link" href="#equipe">Equipe</a>
+        </nav>
+        <button class="button__menu-mobile">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="cabecalho__mobile invisible">
+            <ul class="cabecalho__mobile__list">
+                <li class="cabecalho__mobile__list__item">
+                    <a class="cabecalho__menu__link" href="#sobre">Sobre</a>        
+                </li>
+                <li class="cabecalho__mobile__list__item">
+                    <a class="cabecalho__menu__link" href="#como-jogar">Como Jogar</a>    
+                </li>
+                <li class="cabecalho__mobile__list__item">
+                    <a class="cabecalho__menu__link" href="#ciencia">Ciência</a>       
+                </li>
+                <li class="cabecalho__mobile__list__item">
+                    <a class="cabecalho__menu__link" href="#cadastro">Cadastro</a>       
+                </li>
+                <li class="cabecalho__mobile__list__item">
+                    <a class="cabecalho__menu__link" href="#equipe">Equipe</a>     
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1 class="titulo-jogo">
+        Scientific Odyssey
+    </h1>
+    <div class="cta-wrapper">
+        <a class="cabecalho__menu__link cta" href="#jogue-agora">Jogue Agora</a>
+    </div>
+    <main class="container">
+        <section class="sobre" id="sobre">
+            <h2 data-aos="fade-up" class="titulo-secao">
+                Sobre
+            </h2>
+            <div data-aos="fade-up" class="sobre__content">
+                <div class="sobre__text">
+                    <p>
+                        Prepare-se para começar uma jornada
+                        com a Dra. Carla pela Universidade
+                        Armageddon e salvá-la de experimentos
+                        altamente perigosos. <br></p>
+
+                    <p>
+                        Você vai precisar usar conhecimentos
+                        de áreas específicas — Química, Física
+                        e Biologia — para desvendar todos os
+                        puzzles e utilizar as armas fabricadas
+                        para derrotar seus inimigos!
+                    </p>
+                </div>
+                <div class="sobre__images">
+                    <img src="assets/Dra Carla.svg"
+                        alt="Dra Carla que é preta, usando um jaleco branco de cientista, um sapato branco e um óculos preto, atrás tem um cilindro de ampola com laranja e verde translúcido e brilhante">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="como-jogar" id="como-jogar">
+            <h2 data-aos="fade-up" class="titulo-secao jogar-titulo">Como Jogar</h2>
+            <div class="tutorial-content">
+                <div data-aos="fade-up" class="tutorial-subcontent">
+                    <div class="tutorial__texto">
+                        <p>
+                            Assista o tutorial
+                            em vídeo e
+                            prepare-se para
+                            a aventura!
+                        </p>
+                    </div>
+                    <div class="tutorial__imagem">
+                        <img src="assets/OBJECTS.svg" alt="Um caderno, um erlenmeyer e um becker">
+                    </div>
+                </div>
+                <div class="tutorial__video">
+                    <video width="320" height="240" controls>
+                        <source src=".mp4" type="video/mp4">
+                        <!-- Falta o vídeo aqui -->
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="ciencia" id="ciencia">
+            <h2 data-aos="fade-up" class="titulo-secao">Você sabe o que é <br>Ciência Colaborativa?</h2>
+            <div data-aos="fade-up" class="ciencia__content">
+                <div class="ciencia__image">
+                    <img src="assets/objetos de laboratorio.svg"
+                        alt="Materiais de laboratório de Química, balão volumétrico, um microscópio e tubos de ensaio">
+                </div>
+                <div class="ciencia__texto">
+                    <p>
+                        Ela nada mais é do que a
+                        Investigação científica feita por um
+                        conjunto de colaboradores que não
+                        são necessariamente cientistas, compartilhando
+                        recursos intelectuais, econômicos e/ou físicos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="formulario" id="cadastro">
+            <div data-aos="fade-up" class="formulario__content">
+                <form class="principal__formulario" data-formulario>
+                    <fieldset class="formulario__campo">
+                        <label class="campo__etiqueta" for="nome">Nome de usuário</label>
+                        <input name="nickname" id="nome" class="campo__escrita" type="text" minlength="3"
+                            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$" required />
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+                        <label class="campo__etiqueta" for="email">E-mail:</label>
+                        <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required />
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+                        <label class="campo__etiqueta" for="senha">Senha:</label>
+                        <input name="senha" id="senha" class="campo__escrita" type="password" minlength="8" maxlength="8"
+                            required />
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+                        <label class="campo__etiqueta" for="confirmarSenha">Confirme sua senha:</label>
+                        <input name="confirmarSenha" id="confirmarSenha" class="campo__escrita" type="password"
+                            minlength="8" maxlength="8" required />
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    <fieldset class="formulario__termos">
+                        <input name="termos" class="termos__input" type="checkbox" required>
+                        <p class="termos__texto">Permito compartilhar meu nome de usuário no jogo.</p>
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    <div>
+                        <input value="Inscreva-se para receber o jogo!" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
+                        <span class="mensagem-erro"></span>
+                    </div>
+                    <div>
+                        <!-- -------------------------------------------------- -->
+                        <p class="formulario__mensagem" href="#">placeHolder</p>
+                        <!-- -------------------------------------------------- -->
+                    </div>
+                </form>
+                <div class="descricao__formulario">
+                    <h2 data-aos="fade-up" class="titulo-secao formulatio-titulo">Entre nessa jornada!</h2>
+                    <p class="formulario__texto">
+                        Colete informações e itens para encontrar os experimentos!
+                        Apesar do perigo, a universidade não está vazia.
+                        Vem encontrar professores e alunos para obter informações
+                        importantes para seu progresso e entrar no ranking dos melhores!
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>    
+
+        <div class="imagem__formulario">
+            <img src="assets/rato mutante.svg" alt="Um rato roxo mutante">
+        </div>
+
+        <section data-aos="fade-up" class="equipe" id="equipe">
+            <h2 data-aos="fade-up" class="titulo-secao">QUEM é a XP STUDIO?</h2>
+            <div class="equipe__design">
+                <h3 class="equipe__titulo">Design</h3>
+                <p>Samilla Ferreira Gusmão</p>
+                <p>Sônia Maria De Oliveira Lima</p>
+                <p>Hedilane Dos Santos De Araujo</p>
+                <p>Iza Vitória Carvalho E Carvalho</p>
+            </div>
+            <div class="equipe__jogos">
+                <h3 class="equipe__titulo">Jogos</h3>
+                <p>João José Chagas Neto</p>
+                <p>Leonardo Luis Costa Santos</p>
+            </div>
+            <div class="equipe__dados">
+                <h3 class="equipe__titulo">Dados</h3>
+                <p>Cassiano Fernandes Silva Neto</p>
+                <p>Raimundo Victor Cardoso Cruz</p>
+                <p>Laércio Henrique Filgueiras Santos</p>
+                <p>Luís Gabriel Da Silva Cândido</p>
+            </div>
+            <div class="equipe__front">
+               <h3 class="equipe__titulo">Front</h3>
+               <p>Yasmim Luna Athaydes Martins 
+                   <a href="https://www.linkedin.com/in/yasmim-lunna-a86539234/" target="_blank">
+                       <i class="fab fa-linkedin"></i>
+                   </a>
+               </p>
+               <p>Lucas Leonardo Dos Santos Campos 
+                  <a href="https://www.linkedin.com/in/lucas-campos-798333268/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+              </p>
+              <p>Ludmilla Silva Vaz 
+                  <a href="https://www.linkedin.com/in/ludmilla-vaz-93b226217/" target="_blank">
+                     <i class="fab fa-linkedin"></i>
+                  </a>
+              </p>
+              <p>Hellon Pereira Alves</p>
+              <p>Lianna Cavalcante Ribeiro 
+                  <a href="https://www.linkedin.com/in/lianna-ribeiro-3366b9137/" target="_blank">
+                     <i class="fab fa-linkedin"></i>
+                  </a>
+              </p>
+            </div>
+
+            <div class="equipe__back">
+                <h3 class="equipe__titulo">Back</h3>
+                <p>Marcelo Henrique Bastos Rodrigues</p>
+                <p>Karmaykell Chagas Silva</p>
+                <p>Erika Beatriz Martins Sousa</p>
+                <p>Maykon Bogéa Martins</p>                
+                <p>Mariana De Sousa Lopes</p>
+            </div>
+            <img src="assets/Logo XP.svg" alt="Logo do XP Studio que é a empresa criadora do site/jogo">
+        </section>        
+    </main>
+    <footer class="rodape">
+        <img class="inova" src="assets/Ativo 9INOVA.png" alt="Logo da Inova">
+        <img src="assets/logo secti com fundo branco-08.png" alt="Logo da SECTI com fundo branco">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/animacao-scroll.js"></script>
+    <script src="js/mensagem.js"></script>
+    <script src="js/script.js" type="module"></script>
+</body>
+</html>

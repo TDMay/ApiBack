@@ -1,0 +1,812 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Allerta&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-primaria: #D9BF66;
+    --cor-secundaria: #ffffff;
+    --cor-terciaria: #666A73;
+    --cor-hover: #275b8a;
+
+    --font-primaria: 'Urbanist', sans-serif;
+    --font-secundaria: 'Allerta', sans-serif;
+    --font-terciaria: 'Aclonica', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('../assets/cenario.svg'), url('../assets/tile.svg');
+    background-repeat: repeat-x, repeat;
+    background-position: top center, center;
+    background-size: contain, contain;
+    background-color: var(--cor-primaria);
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+}
+
+/* HOME */
+.formulario__mensagem{
+    display: none; /*ou flex*/
+    justify-content: center;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between; 
+    padding: 2% 10%;
+    align-items: center;
+}
+
+.cabecalho__logo {
+    max-width: 130px;
+    height: auto;
+    margin: 0;
+}
+
+.cabecalho__menu {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--font-terciaria);
+    font-weight: 300;
+    font-size: 1.125rem;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 14px 20px;
+    background-color: var(--cor-terciaria);
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: -2px 2px var(--cor-secundaria);
+    margin-left: 10px;
+}
+
+.cta-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 22%;
+}
+
+.cta {
+    padding: 20px;
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.cta:hover {
+    transform: scale(1.10);
+    background-color: var(--cor-secundaria);
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-primaria);
+}
+
+.titulo-jogo {
+    text-align: center;
+    color: var(--cor-secundaria);
+    font-family: var(--font-terciaria);
+    font-weight: 400;
+    margin-top: 1%;
+}
+
+.button__menu-mobile {
+    width: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    padding: 0.5rem;
+}
+
+.cabecalho__mobile {
+    display: none;
+}
+
+/* ALGUNS ESTILOS DE TÍTULO E PARÁGRAFO */
+
+.titulo-secao {
+    font-size: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+h2, h3 {
+    color: var(--cor-secundaria);
+    font-family: var(--font-primaria);
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+h2::after, h3::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 6px;
+    background-color: var(--cor-terciaria);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.tutorial__texto p {
+    font-size: 1.4rem;
+}
+
+p {
+    color: var(--cor-secundaria);
+    font-family: var(--font-primaria);
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+/* CONTAINERS ROXOS */
+
+.sobre__text, .ciencia__texto {
+    position: relative;
+    display: flex;
+    padding: 2% 5%;
+    background-color: var(--cor-terciaria);
+    box-shadow: -2px 2px 5px var(--cor-hover);
+    border-radius: 10px;
+    width: 45%;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.sobre__text::before, .ciencia__texto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--cor-terciaria);
+    border-radius: 10px;
+    z-index: -1;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.sobre p, .ciencia p {
+    padding: 0;
+    margin: 10px 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.sobre__text:hover, .ciencia__texto:hover {
+    transform: scale(1.05);
+}
+
+.sobre__text:hover::before, .ciencia__texto:hover::before {
+    transform: scale(1.05);
+}
+
+.sobre__text:hover p, .ciencia__texto:hover p {
+    transform: scale(1.05);
+}
+
+/* SOBRE, TUTORIAL E CIÊNCIA E ALGUMAS COISAS DO TÍTULO FORMULÁRIO */
+
+.sobre, .como-jogar, .ciencia, .formulario {
+    display: flex;
+    padding: 0% 9% 0%;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sobre {
+    margin-top: 11.5%;
+}
+
+.tutorial-content, .formulario__content {
+    display: flex;
+    padding-bottom: 3rem;
+    flex-direction: row;
+    margin-top: 2%;
+    align-items: flex-start;
+}
+
+.sobre__content {
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ciencia__content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sobre__images, .ciencia__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.sobre__text, .sobre__images, .tutorial__imagem, .tutorial__texto, .tutorial__video, .ciencia__texto, .ciencia__image, .formulario__texto, .formulario__form, .equipe__texto, .equipe__image {
+    flex: 1;
+}
+
+.formulario__texto {
+    max-width: 70%;
+    text-align: right;
+}
+
+.sobre__images img, .ciencia__image img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+.como-jogar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-terciaria);
+    padding: 5% 9% 0%;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.tutorial__video {
+    margin-left: 10%;
+}
+
+.tutorial__video video {
+    width: 450px;
+    height: 280px;
+}
+
+.tutorial-subcontent {
+    display: flex;
+    margin-top: -90px;
+    flex-direction: column;
+}
+
+.tutorial__imagem {
+    margin-top: 1%;
+    max-width: 290px;
+}
+
+.jogar-titulo, .formulatio-titulo {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.jogar-titulo::after, .formulatio-titulo::after {
+    width: 80px;
+    height: 6px;
+    background-color: var(--cor-primaria);
+    position: absolute;
+    bottom: -10px;
+}
+
+.jogar-titulo::after {
+    left: 92%;
+}
+
+.formulatio-titulo::after {
+    left: 84%;
+}
+
+/* FORMULÁRIO */
+
+.formulario {
+    background-color: var(--cor-terciaria);
+}
+
+.formulario__content {
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    flex-direction: row;
+    margin-top: 2%;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.formulario__titulo::after {
+    background-color: var(--cor-primaria);
+}
+
+.principal__formulario {
+    flex: 1;
+    background-color: var(--cor-primaria);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: -2px 2px 5px var(--cor-hover);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.principal__formulario:hover {
+    transform: scale(1.02);
+}
+
+.formulario__campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.campo__etiqueta {
+    font-family: var(--font-secundaria);
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+}
+
+.campo__escrita {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    font-size: 1.1rem;
+    color: var(--cor-terciaria);
+}
+
+.mensagem-erro {
+    color: rgb(255, 57, 57);
+    font-family: var(--font-primaria);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.formulario__termos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.termos__input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.termos__texto {
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+}
+
+.formulario__botao {
+    width: 100%;
+    padding: 15px;
+    font-family: var(--font-terciaria);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.formulario__botao:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+}
+
+.formulario__recuperaSenha {
+    display: flex;
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    justify-content: center;
+}
+
+.formulario__recuperaSenha:hover {
+    text-decoration: underline;
+}
+
+.descricao__formulario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 80px;
+}
+
+.imagem__formulario {
+    position: relative;
+}
+
+.imagem__formulario img {
+    max-width: 100%;
+    height: auto;
+    margin-top: -240px;
+    margin-left: 920px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* QUEM É A XP STUDIO */
+
+.equipe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: -60px;
+    justify-items: center;
+    align-items: center;
+}
+
+.equipe__design,
+.equipe__front {
+    grid-column: 1;
+}
+
+.equipe__design {
+    padding-right: 35px;
+}
+
+.equipe__jogos {
+    grid-column: 2;
+}
+
+.equipe__dados,
+.equipe__back {
+    grid-column: 3;
+    padding-right: 6%;
+}
+
+.equipe h2 {
+    grid-column: 2;
+    text-align: center;
+}
+
+.equipe h2::after {
+    left: 40%;
+}
+
+.equipe__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--cor-secundaria);
+}
+
+.equipe p {
+    font-family: var(--font-secundaria);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+    padding: 10px 2px;
+}
+
+.equipe img {
+    max-width: 160px;
+    height: auto;
+    margin-top: 20px;
+    justify-self: center;
+    grid-column: 2 / span 1;
+    grid-row: 3;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+.rodape {
+    display: flex;
+    padding: 24px;
+    background-color: var(--cor-hover);
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .rodape .inova {
+    max-width: 100px;
+    height: auto;
+    margin-top: 20px;
+  }
+
+@media (max-width:624px) {
+    body {
+        background-size: calc(100% + 80px) auto;
+    }
+
+    .cabecalho {
+        display: flex;
+        padding: 0 1rem;
+        justify-content: flex-end;
+    }
+
+    .cabecalho__menu {
+        display: none;
+    }
+
+    .cabecalho__logo {
+        max-width: 100px;
+        margin-right: 1rem;
+        margin-left: auto;
+    }
+
+    .button__menu-mobile {
+        display: flex;
+        width: 2.5rem;
+        height: auto;
+        font-size: 2rem;
+        background-color: transparent;
+        color: #D9D9D9;
+        justify-content: center;
+    }
+
+    .cabecalho__mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 1.2rem;
+    }
+
+    .invisible {
+        display: none;
+    }
+
+    .cabecalho__mobile__list {
+        list-style-type: none;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cabecalho__mobile__list__item {
+        width: 100%;
+        background-color: transparent;
+        margin-bottom: 1rem;
+    }
+
+    .cabecalho__menu__link {
+        padding: 0.5rem 2rem;
+    }
+
+    .cta-wrapper {
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .titulo-jogo {
+        margin-top: 1px;
+        font-size: 1rem;
+    }
+
+    .sobre {
+        margin-top: 5%;
+    }
+    
+}
+
+/* ESTILOS PARA TELAS MENORES QUE 1100PX */
+@media (max-width: 1100px) {
+    .cabecalho {
+        padding: 3% 8%;
+        justify-content: center;
+    }
+
+    .cabecalho__menu {
+        justify-content: space-between;
+        margin-right: 2%;
+    }
+  
+    .cabecalho__logo {
+      max-width: 80px;
+      margin-bottom: 10px;
+    }
+  
+    .cta-wrapper {
+      flex-direction: column;
+      margin-top: 18%;
+    }
+  
+    .cta {
+      padding: 15px;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+  
+    .titulo-jogo {
+      margin-top: 2px;
+      font-size: 1.5rem;
+    }
+  
+    .sobre__text, .ciencia__texto {
+      width: 100%;
+      padding: 5%;
+    }
+  
+    .sobre__content, .ciencia__content {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .ciencia__content {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 22px;
+    }
+  
+    .sobre__images, .ciencia__image {
+      width: 90%;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .tutorial-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tutorial-subcontent {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 1px;
+        margin-bottom: 12px;
+    }
+
+    .tutorial-subcontent img {
+        width: 210px;
+    }
+
+    .formulario__content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .jogar-titulo::after {
+        left: 89%;
+    }
+    
+    .formulatio-titulo::after {
+        left: 90%;
+    }
+  
+    .tutorial__video {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .tutorial__video video {
+      width: 100%;
+      height: auto;
+    }
+
+    .formulario__texto {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .principal__formulario {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .descricao__formulario {
+        gap: 10px;
+    }
+  
+    .imagem__formulario img {
+      max-width: 100%;
+      margin-top: -240px;
+      margin-left: 720px;
+    }
+  
+    .equipe {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        align-items: flex-start;
+        justify-items: center;
+        margin-top: -60px;
+    }
+    
+    .equipe h2 {
+        grid-column: 1 / span 3;
+        text-align: center;
+    }
+    
+    .equipe h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .equipe__design, .equipe__front, .equipe__jogos, .equipe__dados, .equipe__back {
+        grid-column: span 1;
+        justify-self: center;
+    }
+    
+    .equipe__design {
+        grid-row: 2;
+    }
+    
+    .equipe__front {
+        grid-row: 3;
+    }
+
+    .equipe__front p {
+        margin-bottom: 10px;
+    }
+    
+    .equipe__front a {
+        text-decoration: none;
+        color: #0077B5;
+        margin-left: 5px;
+    }
+    
+    .equipe__front a:hover {
+        text-decoration: underline;
+    }
+    
+    .equipe__jogos {
+        grid-row: 2;
+    }
+    
+    .equipe__dados {
+        grid-row: 2;
+    }
+    
+    .equipe__back {
+        grid-row: 3;
+    }
+    
+    .equipe img {
+        grid-column: 2 / span 1;
+        grid-row: 3;
+        justify-self: center;
+    }
+
+    .rodape {
+      flex-direction: row;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .rodape .inova {
+      margin-top: 10px;
+      max-width: 80px;
+    }
+  }  
